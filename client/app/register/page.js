@@ -12,7 +12,7 @@ const register = () => {
         const userDetails = {username : username, email : email, password : password};
         try {
       
-            const response = await fetch('http://localhost:5000/register', {
+            const response = await fetch('http://localhost:5000/user/register', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -22,9 +22,6 @@ const register = () => {
         
             if (response.status === 201) {
               console.log('Registered and logged in successfully!');
-              setUsername('');
-              setEmail('');
-              setPassword('');
               window.location.href = '/'
             } else {
               console.error('Failed to Register:', response.status);

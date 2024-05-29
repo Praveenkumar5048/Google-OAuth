@@ -1,5 +1,5 @@
-import {User}  from "../models/postBlog.js"; 
-import passport from "passport";
+import { User }  from "../models/postBlog.js"; 
+import passport from '../config/passport.js';
 
 export const registerUser  = async (req, res) => {
     try {
@@ -50,3 +50,4 @@ export const loginUser = async (req, res, next) => {
       });
     })(req, res, next);
 };
+
