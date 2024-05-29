@@ -66,8 +66,10 @@ const Header = () => {
     return (
         <nav className='flex justify-between'>
             <Link href="/">
-                <div className='flex gap-3 m-4'>
-                    <img src="/blogger.png" alt="Blogger Logo" className="h-10 w-10 rounded"/>
+                <div className='flex gap-3 m-4 '>
+                    <div className='h-10 w-10 rounded bg-orange-500'>
+                    <img src="/blog-new-logo.svg" alt="Blogger Logo" className='p-1'/>
+                    </div>
                     <p className='text-2xl m-auto'>Blogger</p>
                 </div>
             </Link>
@@ -84,7 +86,7 @@ const Header = () => {
                         <FontAwesomeIcon icon={faAngleDown} className="ml-2 text-lg" />
                     </div>
 
-                    <ul className={`absolute top-16 w-56 right-0 bg-white rounded-lg overflow-hidden shadow transition-max-height duration-500 ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
+                    <ul className={`absolute top-16 w-56 right-0 z-10 bg-white rounded-lg overflow-hidden shadow transition-max-height duration-500 ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
                         <li className="py-2 pl-4 text-black">{user.username}</li>
                         <li className="py-2 pl-4 transition duration-300 hover:bg-secondary-light">
                             <button onClick={handleLogout} className="flex items-center text-sm font-medium text-black no-underline">

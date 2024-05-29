@@ -26,9 +26,9 @@ const Page = () => {
         
     try {
       
-      const response = await fetch(`api/blogs/${postId}`, {method: 'DELETE'});
+      const response = await fetch(`http://localhost:5000/delete/blogs/${postId}`, {method: 'DELETE'});
   
-      if (response.ok) {
+      if (response.status === 200) {
         console.log('Blog deleted successfully!');
         setFlag(!flag);
       } else {

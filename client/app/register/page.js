@@ -40,9 +40,13 @@ const register = () => {
                 <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"></a>
                 <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <div className='mx-auto h-20 w-20 rounded bg-orange-500'>
+                            <img src="/blog-new-logo.svg" alt="Blogger Logo" className='p-1'/>
+                        </div>
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             Create an Account
                         </h1>
+                        <p className='text-gray-500'>Get Started Today!!</p>
                         <form className="space-y-4 md:space-y-6" onSubmit={handleRegister}>
                             <div>
                                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>

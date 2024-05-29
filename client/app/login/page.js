@@ -45,9 +45,13 @@ const login = () => {
                 <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"></a>
                 <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                        <div className='mx-auto h-20 w-20 rounded bg-orange-500'>
+                            <img src="/blog-new-logo.svg" alt="Blogger Logo" className='p-1'/>
+                        </div>
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                            Sign in to your account
+                            Hey!! Welcome Back
                         </h1>
+                        <p className='text-gray-500'>Sign in to your account</p>
                         <form className="space-y-4 md:space-y-6" onSubmit={handleLogin}>
                            
                             <div>
@@ -72,7 +76,12 @@ const login = () => {
                             </p>
                         </form>
                         <p className="text-center text-black">or</p>
-                        <button type="submit" onClick={handleGoogleLogin} className="w-full text-black bg-green-500 hover:bg-green-300  font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Sign with Google</button>
+                        <div className="flex items-center justify-center dark:bg-gray-800">
+                            <button onClick={handleGoogleLogin} className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-green-400 hover:text-slate-900 hover:shadow transition duration-150">
+                                <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo"></img>
+                                <span>Login with Google</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
